@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class HelloWorldServlet
+ * Servlet implementation class CalcServlet
  */
-@WebServlet("/hello")
-public class HelloWorldServlet extends HttpServlet {
+@WebServlet("/calc")
+public class CalcServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public HelloWorldServlet() {
+    public CalcServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,8 +28,22 @@ public class HelloWorldServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int n1 = Integer.parseInt(request.getParameter("n1"));
+		int n2 = Integer.parseInt(request.getParameter("n2"));
+		
+		long result = 0;
+		
+		switch(request.getParameter("op")) {
+		case "+": result = n1+n2;break;
+		case "-": result = n1-n2;break;
+		case "/": result = n1/n2;break;
+		case "*": result = n1*n2;break;
+		}
+				
 		PrintWriter out = response.getWriter();
-		out.println("<html><body><h2>Hello World Servlet</h2></body></html>");
+		out.println("<html><body><h2>Simple Calculator</h2><hr>");
+		out.println("Result : "+result+"</body></html>");
+
 	}
 
 	/**

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div align=center>
+<H2>Request Test Form </H2>
+<HR>
+<form method="post" action="formSubmit.jsp">
+<table border=1 cellspacing="1" cellpadding="5">
+<tr>
+<td>Name</td>
+<td><input type=text size=10 name="username"></td> 
+<tr>
+<td>Job</td>
+<td>
+<select name="job">
+	<option selected>None</option>
+	<option>Business</option>
+	<option>IT Company</option>
+	<option>Student</option>
+</select>
+</td>
+<tr>
+<td>Favorites</td>
+<td>
+<input type="checkbox" name="favorite" value="f01-art">Art
+<input type="checkbox" name="favorite" value="f02-sns">SNS
+<input type="checkbox" name="favorite" value="f03-music">Music
+
+<tr><td colspan="2" align="center"><input type="submit" value="Confirm"><input type="reset" value="Cancel"></td></tr>
+</table>
+
+</form>
+</div>
+</body>
+</html>
