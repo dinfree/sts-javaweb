@@ -10,8 +10,8 @@
 </head>
    <body>
     <% 
-        if (request.getAttribute("studentRecord") != null) {
-            Student student = (Student) request.getAttribute("studentRecord");
+        if (request.getAttribute("student") != null) {
+            Student student = (Student) request.getAttribute("student");
     %>
   
     <h1>Student Record</h1>

@@ -21,10 +21,10 @@ public class StudentController extends HttpServlet {
         if (studentID != null) {
             int id = Integer.parseInt(studentID);
             studentService.getStudent(id)
-              .ifPresent(s -> request.setAttribute("studentRecord", s));
+              .ifPresent(s -> request.setAttribute("student", s));
         }
  
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/exam/studentinfo.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/basic/studentinfo.jsp");
         dispatcher.forward(request, response);
     }
  
