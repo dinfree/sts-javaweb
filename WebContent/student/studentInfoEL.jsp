@@ -6,13 +6,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Student Information</title>
-</head> 
+</head>
    <body>
-	<jsp:useBean id="student" class="com.dinfree.javaweb.basic.Student" scope="request"/>
-
+  
     <h1>Student Record</h1>
-    <div>ID: <%= student.getId()%></div>
-    <div>First Name: <%= student.getName()%></div>
-    <div>Last Name: <%= student.getDept()%></div>
+    <hr>
+    <ul>
+	    <li>ID: ${student.id}</li>
+	    <li>First Name: ${student.name}</li>
+	    <li>Last Name: ${student.dept}</li>
+    </ul>                   
     </body>
 </html>

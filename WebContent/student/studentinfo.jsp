@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="com.dinfree.javaweb.basic.Student"%>
+<%@ page import="com.dinfree.javaweb.student.Student"%>
 
 <!DOCTYPE html>
 <html>
@@ -15,10 +15,13 @@
     %>
   
     <h1>Student Record</h1>
-    <div>ID: <%= student.getId()%></div>
-    <div>First Name: <%= student.getName()%></div>
-    <div>Last Name: <%= student.getDept()%></div>
-         
+    <hr>
+    <ul>
+	    <li>ID: <%= student.getId()%></li>
+	    <li>Name: <%= student.getName()%></li>
+	    <li>Department: <%= student.getDept()%></li>
+    </ul>
+             
     <% 
         } else { 
     %>

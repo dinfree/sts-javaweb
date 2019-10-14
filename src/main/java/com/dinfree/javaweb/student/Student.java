@@ -1,4 +1,4 @@
-package com.dinfree.javaweb.basic;
+package com.dinfree.javaweb.student;
 
 public class Student {
 	private int id;

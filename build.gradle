@@ -1,6 +1,17 @@
-plugins {
-    id 'java-library'
-    id 'war'
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+webAppDirName='WebContent'
+
+eclipse {
+    project.natures "org.springsource.ide.eclipse.gradle.core.nature"
+    wtp {
+        facet {
+            facet name: 'jst.web', version: '4.0'
+            facet name: 'jst.java', version: '11'
+        }
+    }
 }
 
 repositories {
@@ -13,4 +24,17 @@ dependencies {
     compile group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.4'
     compile group: 'com.h2database', name: 'h2', version: '1.4.199'
     testImplementation 'junit:junit:4.12'
+    
+    compile 'com.google.firebase:firebase-admin:6.9.0'
+    
+    //compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+	//compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.3.0'
+ 
+ 	//compile group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9' 
+	
+	// Apache Jersey dependencies, require all
+	compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.27'
+	compile group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: '2.27'
+	compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.4.0-b180830.0359'
+	compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.27'   
 }

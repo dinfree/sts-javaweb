@@ -1,4 +1,4 @@
-package com.dinfree.javaweb.basic;
+package com.dinfree.javaweb.student;
 
 import java.io.IOException;
 
