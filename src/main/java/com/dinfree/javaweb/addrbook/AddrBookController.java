@@ -29,9 +29,9 @@ public class AddrBookController extends HttpServlet {
 	AddrBookDAO dao;
 	
 	public void init(ServletConfig config) {
-		//dao = new AddrBookH2DAO();
-		dao = new AddrBookMemDAO();
-		config.getServletContext().setAttribute("storage", dao);
+		dao = new AddrBookH2DAO();
+		//dao = new AddrBookMemDAO();
+		//config.getServletContext().setAttribute("storage", dao);
 	}
 	
     private void processRequest(

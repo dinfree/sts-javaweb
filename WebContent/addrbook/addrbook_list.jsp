@@ -17,7 +17,7 @@
 </head>
 
 <body>
-	<div class="container w-75 mx-auto mt-5">
+	<div class="container w-75 mx-auto mt-5 shadow p-3">
 		<H2>AddressBook::List</H2>
 		<HR>
 		<form>

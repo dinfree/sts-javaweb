@@ -30,7 +30,7 @@ dependencies {
     //compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
 	//compile group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.3.0'
  
- 	//compile group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9' 
+ 	compile group: 'com.mashape.unirest', name: 'unirest-java', version: '1.4.9' 
 	
 	// Apache Jersey dependencies, require all
 	compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.27'

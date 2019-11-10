@@ -19,7 +19,8 @@ public class AddrBookH2DAO implements AddrBookDAO {
 
 	/* H2 DB 연결정보 */
 	String jdbc_driver = "org.h2.Driver";
-	String jdbc_url = "jdbc:h2:tcp://127.0.0.1/~/test"; 
+	String jdbc_url = "jdbc:h2:~/testdb";
+	//String jdbc_url = "jdbc:h2:tcp://127.0.0.1/~/test"; 
 
 	// DB연결 메서드
 	void connect() {
